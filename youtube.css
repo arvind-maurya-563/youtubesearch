@@ -1,0 +1,119 @@
+*{
+    margin:  0 0;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+#container img {
+    width: 100%;
+}
+#container>div{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#container h4{
+   margin: 20px 10px;
+}
+#navbaar{
+    width: 100%;
+    display: flex;
+    background-color: rgb(45, 44, 44);
+    color: white;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    width: 40px;
+    height: 30px;
+    background-color: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo i{
+    color: white;
+    font-size: 25px;
+}
+#logowithicone{
+    display: flex;
+    margin-left: 20px;
+}
+.logo+p{
+    font-size: 30px;
+    font-weight: 900;
+}
+#searchbaar>input{
+    background-color: #0000;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+ width: 500px;
+ border: 1px solid blue;
+ outline: none;
+}
+#searchbaar>input:hover{
+    outline: 1px solid blue;
+    background-image: url();
+}
+#searchbaar>button{
+    background-color: rgb(34, 32, 32);
+    color: white;
+    height: 43px;
+    width: 60px;
+    border: none;
+    margin: 0 0;
+    font-size: 25px;
+}
+a[href="youtube.html"]{
+    text-decoration: none;
+    color: white;
+}
+#micrphone{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+#searchbaar{
+    display: flex;
+    align-items: center;
+}
+#photoand_bell_icon{
+   display: flex;
+   align-items: center;
+}
+#photoand_bell_icon>img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+#photoand_bell_icon>i{
+    font-size: 25px;
+    background-color: black;
+    /* border: 1px solid white; */
+}
+#showVideo,#title{
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+#showVideo>iframe{
+    width: 100%;
+    height: 500px;
+}
+body{
+   background-color: rgb(34, 32, 32);
+   color: white;
+}

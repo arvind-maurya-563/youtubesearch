@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Youtube</title>
+    <link rel="stylesheet" href="youtube.css">
+    <script src="https://kit.fontawesome.com/eaafce657d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav id="navbaar">
+        <a href="youtube.html">
+            <div id="logowithicone">
+                <div class="logo">
+                    <i class="fa-solid fa-caret-right"></i>  
+                </div>
+                <p>Youtube</p>
+            </div>
+        </a>
+        <div id="searchbaar">
+            <input id="search" type="text" placeholder="Search a video">
+            <button id="btn" onclick="searchOnYoutube()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div id="micrphone">
+                <i class="fa-solid fa-microphone"></i>
+            </div>
+        </div>
+        <div id="photoand_bell_icon">
+            <i class="fa-solid fa-bell"></i>
+            <img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-man-avatar-icon-professional-man-character-png-image_4356027.jpg" alt="">
+        </div>
+    </nav>
+    <div>
+        <h1 id="title"></h1>
+    </div> 
+    <div id="showVideo">
+
+    </div>
+</body>
+</html>
+<script>
+   var title = document.querySelector("#title");
+    let showVideoeliment = document.querySelector("#showVideo");
+    let obj = JSON.parse(localStorage.getItem("vdeatils"));
+    const Display = (video)=>{
+        let titeleliment  = document.createElement("h2");
+        titeleliment.innerText = video.snippet.title;
+        title.append(titeleliment)
+         let ifram = document.createElement("iframe");
+        ifram.src = `https://www.youtube.com/embed/${video.id.videoId}`
+        showVideoeliment.append(ifram);
+    }
+    Display(obj);
+    document.getElementById("search").addEventListener("click",()=>{
+        location.href = "youtube.html";
+    })
+</script>
